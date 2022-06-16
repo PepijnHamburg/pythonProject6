@@ -1,16 +1,14 @@
-# This is a sample Python script.
+import instaloader
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# Get instance
+loader = instaloader.Instaloader()
 
+USER = 'pepain101'
+PASSWORD = 'Tornados12!'
+# Login using the credentials
+loader.login(USER, PASSWORD)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# Use Profile class to access metadata of account
+profile = instaloader.Profile.from_username(loader.context,
+                                            'pepain101')
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
